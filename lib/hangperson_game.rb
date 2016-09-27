@@ -24,6 +24,9 @@ class HangpersonGame
   end
   
   def guess(char)
+    if char.nil? || char.empty? || char =~ /[^A-Za-z]/ 
+      raise ArgumentError 
+    end 
     
     char = char.downcase
     if @word.include? char and !@guesses.include? char
