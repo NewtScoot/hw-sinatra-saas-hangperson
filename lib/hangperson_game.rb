@@ -56,7 +56,6 @@ class HangpersonGame
     elsif @word_with_guesses =~ /[-]/
       return :play
     end
-    
     return :win
   end
   
